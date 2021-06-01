@@ -1,0 +1,50 @@
+{% extends 'template.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+ 
+<style>
+
+.bg1 {
+  	background-color: red;
+  }
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+<a href='/ex1' class="previous round">&laquo; Home</a><br>
+      <h4> {{ cname }} List </h4>
+        <table>
+        <tr>
+        <th>Title</th>
+        <th>Url</th>
+        </tr>
+            {% for p in page %}
+                <tr>
+                    <td>{{ p.title}}</td>
+                    <td> {{ p.url}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <br><br>
+<form method="POST">
+{% csrf_token %}
+<a href={{ cname }}  class="btn btn-dark">Likes</a>
+</form>
+  
+ 
+{% endblock content %}

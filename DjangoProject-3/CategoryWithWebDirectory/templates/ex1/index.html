@@ -1,0 +1,57 @@
+{% extends 'template.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h4> Add Category </h4>
+      <form method="POST">
+      {% csrf_token %}
+      {{ form|crispy}}
+     <button type="submit" class="btn btn-primary">submit</button>
+      </form>
+    </div>
+
+    <div class="col-sm">
+      <h4> Category List </h4>
+        <table>
+        <tr>
+        <th>Name</th>
+        <th>Visits</th>
+        <th>Likes</th>
+        </tr>
+            {% for c in category %}
+                <tr>
+                    <td> <a href={{c.name}}> {{ c.name}}</a></td>
+                    <td> {{ c.visit}}</td>
+                    <td> {{ c.likes}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+  </div>
+</div>
+
+ 
+{% endblock content %}

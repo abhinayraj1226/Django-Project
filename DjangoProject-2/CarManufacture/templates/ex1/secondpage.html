@@ -1,0 +1,12 @@
+{% extends 'template.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="col-6">
+<h3>Data from django session</h3><br>
+    <h4> Car Manufacture: {{ data.car}}</h4><br>
+    <h4> model name: {{ data.model}}</h4>
+</div>
+
+
+{% endblock content %}

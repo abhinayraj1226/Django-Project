@@ -1,0 +1,22 @@
+{% extends 'template.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="col-6">
+<h3>Employee Promotion</h3><br>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-primary">Am I Eligible For Promotion</button>
+        <br><br>
+        {% if eligible%}
+            <label>Yes {{ date}}</lable>
+        {%else %}
+            <label>No {{ date}}</lable>
+        {% endif %}
+        
+    </form>
+</div>
+
+
+{% endblock content %}

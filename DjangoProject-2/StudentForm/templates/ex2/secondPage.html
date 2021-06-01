@@ -1,0 +1,14 @@
+{% extends 'template.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="col-6">
+<h3>Student Session data:</h3><br>
+<a href="" class="previous round">&laquo; Back</a><br>
+   <h4> Name: {{ data.name }} </h4><br>
+   <h4> Roll: {{ data.roll }} </h4><br>
+   <h4> Subject: {{ data.subject }} </h4><br>
+</div>
+
+
+{% endblock content %}

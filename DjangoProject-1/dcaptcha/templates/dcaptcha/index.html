@@ -1,0 +1,41 @@
+{% extends 'template.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+<form  method="POST">
+              {% csrf_token %}
+          <div style="padding-top:200px">
+          <table style="border: 2px solid black">
+            <tr>
+              <td>CAPTHA</td>
+              <td>
+                <canvas id="myCanvas" width="350" height="100" style="background-color: beige;">{{img}}</canvas>
+              
+              </td>
+            </tr>
+            <tr>
+              <td><input type="text" class=" mt-3 mb-3" name="captha" {% if data >= 3 %} 
+                                                                          disabled
+                                                                        {% endif %}
+                                                                          
+                                                                          ></td>
+              <td><label>Enter Above text here</label></td>
+            </tr>
+          </table>
+          </div>
+          
+            <button type="submit" class="btn btn-primary mt-4">Submit</button>
+              <label>{{ msg }}</label>
+            
+          </form>
+
+ <script>
+    var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+      ctx.font = "50px Comic Sans MS";
+      ctx.fillStyle = "red";
+      ctx.textAlign = "center";
+      ctx.fillText("{{img}}", canvas.width/2, canvas.height/2);
+      </script>
+
+
+{% endblock content %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'magzine/style.css' %}">
+</head>
+<style>
+html, body {
+    background: {{ magzine.Backround_Color }};
+}
+
+.heart{
+    color : {{ magzine.title_color }};
+    font-size: {{ magzine.title_font_size}}px;
+}
+main{
+    color: {{ magzine.body_color }};
+    font-size:{{ magzine.body_font_size}}px;
+}
+
+</style>
+<body>
+<article>
+	<h1>
+    <span class="heart">{{magzine.title_text}}</span>
+	</h1>
+<cite>
+		by <span class="name">ABHINAY RAJ</span> | 
+		Photos by <span class="name">Jay Drowns</span>
+	</cite>
+
+<img src="{% static img %}" alt="not actually Fabio" />
+<main>
+		<p>{{ magzine.body_text}}</p>
+	</main>
+</body>
+</html>
+

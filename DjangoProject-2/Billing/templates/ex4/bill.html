@@ -1,0 +1,16 @@
+{% extends 'template.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="col-6">
+<br><br><br>
+<h3> Company: {{ data.company }}</h3>
+<h4> item:</h4>
+<h4> Mobile: {{ data.mobile}}</h4>
+<h4> Laptop: {{ data.laptop}}</h4>
+<h3> Total item: {{ data.total}}</h3>
+
+</div>
+
+
+{% endblock content %}

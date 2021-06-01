@@ -1,0 +1,30 @@
+{% extends 'template.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="col-6">
+<br>
+<a href='/ex2' class="previous round">&laquo; Home</a><br>
+<h3 style="color:blue;">Find Employee</h3><br>
+  <form method="POST">
+  {% csrf_token %}
+  <h5> Company Name:</h5>
+  <input type="text" name="company"><br><br>
+  <button class="btn btn-primary" >Submit</button>
+
+  </form><br>
+{% if empl != -1 %}
+{% if hasData %}
+    <h5> Employee Detail:</h5><br>
+    {% for d1, d2 in empl %}
+    <h5 style="color:red;">Name: {{ d1.person_name }},  City: {{ d2.city }}</h5>
+    {% comment %} <h4 style="color:red;"></h4> {% endcomment %}
+    {% endfor %}
+    
+{% else %}
+    <h4> No Employee Found </h4>
+    
+{% endif %}
+{% endif %}
+</div>
+{% endblock content %}

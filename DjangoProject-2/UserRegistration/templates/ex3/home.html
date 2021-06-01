@@ -1,0 +1,15 @@
+{% extends 'template.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="col-6">
+<br><br><br>
+<h4> Welcome {{ data.username }} </h4><br>
+<h5> Email: {{ data.email}} </h5><br>
+<h5> Contact: {{ data.contact}} </h5><br>
+
+
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,46 @@
+{% extends 'template.html' %}
+{% block content %}
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+<div class="col-6">
+<br><br><br>
+<h3 style="color:red;">Books Store</h3><br><br>
+<a  class="btn btn-info" href="registerAuthor">Register Author</a>
+<a  class="btn btn-info" href="registerPublisher">Register Publisher</a>
+<a  class="btn btn-info" href="publishBook">Publish Book</a><br><br>
+
+<h5>Current Book List </h5>
+    <table>
+    <tr>
+    <th>Book</th>
+    <th>Publication Date</th>
+  </tr>
+  {% for b in book %}
+    <tr>
+        <td> {{ b.title}}</td>
+        <td> {{ b.publication_date}}</td>
+    </tr>
+  {% endfor %}
+    </table>
+
+
+</div>
+
+
+{% endblock content %}

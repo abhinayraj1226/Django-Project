@@ -1,0 +1,116 @@
+body {background: #888; height: 100%;}
+span {color: #F57D11;}
+
+.book {
+    display: block;
+    position: absolute;
+    height: 850px;
+    width: 700px;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #393939;
+}
+
+a:link {
+  color: green; 
+  background-color: transparent; 
+  text-decoration: none;
+}
+
+
+.cover-design {
+    display: block;
+    position: absolute;
+    height: 600px;
+    width: 600px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: sans-serif;
+    color: #EEE;
+}
+
+.diamond-frame {
+    position: absolute;
+    height: 325px;
+    width: 325px;
+    top: 64.8%;
+    left: 14.5%;
+    transform: rotate(45deg) translate(-50%,-50%);
+    border-left: 50px solid #AFA;
+    border-right: 50px solid #CCC;
+    border-top: 50px solid #FF7300;
+    border-bottom: 50px solid #0BF;
+}
+
+.box {
+    position: absolute;
+    height: 50px;
+    width: 52px;
+    z-index: 1000;
+}
+.a {background: #840; top: -50px; left: -51px;}
+.b {background: #b40; top: -50px; right: -51px;}
+.c {background: #077; bottom: -50px; right: -51px;}
+.d {background: #0A9; bottom: -50px; left: -51px;}
+
+.book-title {
+    position: absolute;
+    width: 100%;
+    font-size: 57px;
+    top: 45%;
+    text-align: center;
+}
+
+.book-subtitle {
+    position: absolute;
+    width: 100%;
+    font-size: 24px;
+    top: 55%;
+    text-align: center;
+}
+
+.metadata {
+    display: block;
+    position: absolute;
+    padding-left: 90px;
+    padding-top: 10px;
+    /*width: 50%;*/
+    top: 90%;
+    text-transform: uppercase;
+    color: #777;
+    font-size: 22px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.reviews{
+    display: block;
+    padding-top: 10px;
+    padding-left: 300px;
+    top: 90%;
+    text-transform: uppercase;
+    color: #777;
+    font-size: 22px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+
+}
+.publisher{
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 460px;
+    top: 90%;
+    text-transform: uppercase;
+    color: #777;
+    font-size: 22px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    border-top: solid orange;
+    border-bottom: solid orange;
+
+}

@@ -1,0 +1,20 @@
+{% extends 'template.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="col-6">
+<br>
+<a href='/ex3' class="previous round">&laquo; Home</a><br>
+<h3 style="color:blue;">Publish Form</h3><br>
+{% if submitted %}
+    <br><br><h4 style="color:green;"> Publisher Added Sucessfully! </h4>
+{% endif %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <br><br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
+{% endblock content %}

@@ -1,0 +1,28 @@
+{% extends 'template.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="col-6">
+<h3>Online purchage</h3><br>
+
+    
+    <form method="POST" class="crispy">
+    {% csrf_token %}
+    <h3> Company </h3>
+    <input type="radio" name="company" value="Hp">  Hp<br><br>
+    <input type="radio" name="company" value="Nokia">  Nokia<br><br>
+    <input type="radio" name="company" value="Samsung">  Samsung<br><br>
+    <input type="radio" name="company" value="Motorola">  Motorola<br><br>
+    <input type="radio" name="company" value="Apple">  Apple<br><br>
+<br><br>
+    <h4> Items </h4>
+    <input type="checkbox" name="mobile" value="mobile" >Mobile
+    <input type="number" name="qun1"  ><br><br>
+    <input type="checkbox" name="laptop" value="laptop" >Laptop
+    <input type="number" name="qun2"><br><br>
+    <button type="submit" class="btn btn-primary">Produce Bill</button>
+    </form>
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% comment %} {% load static %} {% endcomment %}
+<link rel="stylesheet" href="https://use.typekit.net/dwy8zjx.css">
+{% comment %} <link rel="stylesheet" type="text/css" href="{% static 'book/style.css' %}"> {% endcomment %}
+style{
+/* Layout */
+html, body {
+  background: #eee3c8;
+  margin: 0;
+  padding: 0 0 15px;
+}
+
+article {
+  margin: auto;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-gap: 0.5em;
+}
+
+h1, cite, img, aside, main {
+  grid-column: 2;
+}
+
+main {
+  max-width: 450px;
+  margin: auto;
+  text-align: justify;
+}
+
+img {
+  width: 100%;
+}
+
+p:first-child {
+  margin-top: 0;
+}
+
+p:last-child::after {
+  content: " ■";
+  opacity: 0.2;
+}
+
+/* Title Layout */
+h1 span {
+  display: block;
+}
+
+.focusing {
+  margin-bottom: -10px;
+}
+
+.the {
+  transform: translateY(50%);
+  background: #eee3c8;
+  width: 50px;
+  margin: auto;
+}
+
+.heart {
+  border: thin solid black;
+  border-width: thin 0;
+  padding: 10px 0 0;
+}
+
+/* Typography */
+h1 {
+  text-align: center;
+}
+
+.focusing {
+  font-family: "questa-grande";
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+.the {
+  font-family: "brandon-grotesque";
+  text-transform: uppercase;
+  font-size: 0.5em;
+}
+
+.heart {
+  font-family: "ltc-bodoni-175";
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+cite {
+  font-family: "brandon-grotesque";
+  font-style: normal;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.name {
+  font-weight: 900;
+}
+
+main {
+  font-family: "abril-text";
+}
+
+.dropcap {
+  font-family: "brandon-grotesque";
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 0.1em;
+}
+
+aside {
+  font-family: "brandon-grotesque";
+  font-style: italic;
+  text-align: right;
+}
+
+@media only screen and (min-width: 750px) {
+  /* Layout */
+  html, body {
+    padding: 30px 0;
+  }
+
+  article {
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-gap: 1.5em;
+  }
+
+  main {
+    margin: 0;
+  }
+
+  aside {
+    grid-column: 1;
+    grid-row: 4;
+    margin-top: 7em;
+  }
+
+  /* Title */
+  .focusing {
+    font-size: 2.2em;
+    margin-bottom: -15px;
+  }
+
+  .the {
+    font-size: 0.75em;
+  }
+
+  .heart {
+    font-size: 4em;
+  }
+}
+}
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<article>
+	<h1>
+		<span class="focusing">Focusing On</span> 
+		<span class="the">The</span> 
+		<span class="heart">Heart</span>
+	</h1>
+	<cite>
+		by <span class="name">Jay Wamsley</span> | 
+		Photos by <span class="name">Jay Drowns</span>
+	</cite>
+	<img src="https://images.unsplash.com/photo-1471119017026-179f1bb0a70e?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="not actually Fabio" />
+	<aside>Fabio Sagebin is currently in the final year of a residency at the University of Rochester Medical Center.</aside>
+	<main>
+		<p><span class="dropcap">A dozen</span> years ago, soon-to-be UVU student Fabio Sagebin was doing research - on whether or not higher education was for him and, if so, where he should enroll. A dozen years from now, Dr. Sagebin will again likely be doing research - this time on better ways to repear hearts.</p>
+		<p>Currently a member of the University of Rochester Medical Center's cardiothoracic surgery integrated residency program, Sagebin says a decade ago, he was "fully intending to finish high school, go on a mission, and come home and work construction with my dad." His family - who had emigrated when he was 3 years old to Utah from a small city in southern Brazil, near the Uruguayan border - had begun a successful business, building steel-frame homes. His mission for The Church of Jesus Christ of Latter-Day Saints had taken him to New York City, specifically Brooklyn and Queens.</p>
+		<p>A visit with his mission president "changed the trajectory for me," Sagebin remembers. "I worked closely with my mission president, and during that mentorship he planted the seed that I really needed a formal education.</p>
+		<p>"Unfortunately, I had not really prepared for that at that point. My parents were wonderful people, hardworking people, but we didn't have the social infrostructure necessary for college prep. It was not something that was inculcated in my family culture. I didn't take the SAT of the ACT, and I really hadn't prepared for college. So, when I came home, I just looked for an open-enrollment college."</p>
+	</main>
+</article>
+<!-- partial -->
+  
+</body>
+</html>
+
